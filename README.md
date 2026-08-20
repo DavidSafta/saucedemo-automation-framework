@@ -26,7 +26,9 @@ UI + API test automation framework for [SauceDemo](https://www.saucedemo.com), b
 ### Login (`login.feature`)
 - Successful login with valid credentials → redirects to inventory page
 - Failed login with invalid credentials → shows error message
-
+  
+### Checkout (`checkout.feature`)
+- Successful checkout with one product in cart → order confirmation displayed
 ## How to run
 
 Run the Cucumber suite via:
@@ -44,7 +46,7 @@ Expected result: **2 tests passed**, exit code 0
 - [x] Page Object Model
 - [x] Cucumber BDD setup
 - [x] Login scenarios
-- [ ] Checkout flow scenarios
+- [x] Checkout flow scenarios
 - [ ] API testing (REST Assured)
 - [ ] Docker containerization
 - [ ] Allure reporting
