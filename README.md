@@ -30,17 +30,16 @@ UI + API test automation framework for [SauceDemo](https://www.saucedemo.com), b
   
 ### Checkout (`checkout.feature`)
 - Successful checkout with one product in cart → order confirmation displayed
+  
 ## How to run
 
 Run the Cucumber suite via:
 
-com.davidsafta... (or default package) → TestRunner.java
-
+`TestRunner.java` (in `src/test/java/runner`)
 
 In IntelliJ: right-click `TestRunner.java` → **Run 'TestRunner'**
 
-Expected result: **2 tests passed**, exit code 0
-
+Expected result: **6 tests passed**, exit code 0
 ### API (`api.feature`)
 - Get an existing todo item → returns 200 with title field
 - Get a non-existing todo item → returns 404
