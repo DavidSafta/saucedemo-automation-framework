@@ -1,5 +1,4 @@
-import com.codeborne.selenide.Configuration;
-import io.cucumber.java.Before;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
@@ -13,12 +12,6 @@ public class CheckoutSteps {
     private final InventoryPage inventoryPage = new InventoryPage();
     private final CartPage cartPage = new CartPage();
     private final CheckoutPage checkoutPage = new CheckoutPage();
-
-    @Before
-    public void setUp() {
-        Configuration.browser = "chrome";
-        Configuration.timeout = 10000;
-    }
 
     @Given("the user is logged in as {string}")
     public void the_user_is_logged_in_as(String username) {

@@ -1,5 +1,3 @@
-import com.codeborne.selenide.Configuration;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -11,12 +9,6 @@ import static org.junit.Assert.assertTrue;
 public class LoginSteps {
 
     private final LoginPage loginPage = new LoginPage();
-
-    @Before
-    public void setUp() {
-        Configuration.browser = "chrome";
-        Configuration.timeout = 10000;
-    }
 
     @Given("the user is on the SauceDemo login page")
     public void the_user_is_on_the_login_page() {
