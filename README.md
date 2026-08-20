@@ -10,6 +10,7 @@ UI + API test automation framework for [SauceDemo](https://www.saucedemo.com), b
 - JUnit 4.13.2
 - Selenide 7.3.1 (built on Selenium WebDriver)
 - Page Object Model
+- REST Assured 5.4.0 (API testing)
 
 ## Project structure
 
@@ -29,16 +30,20 @@ UI + API test automation framework for [SauceDemo](https://www.saucedemo.com), b
   
 ### Checkout (`checkout.feature`)
 - Successful checkout with one product in cart → order confirmation displayed
+  
 ## How to run
 
 Run the Cucumber suite via:
 
-com.davidsafta... (or default package) → TestRunner.java
-
+`TestRunner.java` (in `src/test/java/runner`)
 
 In IntelliJ: right-click `TestRunner.java` → **Run 'TestRunner'**
 
-Expected result: **2 tests passed**, exit code 0
+Expected result: **6 tests passed**, exit code 0
+### API (`api.feature`)
+- Get an existing todo item → returns 200 with title field
+- Get a non-existing todo item → returns 404
+- Create a new post → returns 201 with correct title
 
 ## Roadmap
 
@@ -47,7 +52,7 @@ Expected result: **2 tests passed**, exit code 0
 - [x] Cucumber BDD setup
 - [x] Login scenarios
 - [x] Checkout flow scenarios
-- [ ] API testing (REST Assured)
+- [x] API testing (REST Assured)
 - [ ] Docker containerization
 - [ ] Allure reporting
 - [ ] CI/CD with GitHub Actions
