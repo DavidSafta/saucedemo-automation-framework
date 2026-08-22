@@ -12,6 +12,7 @@ UI + API test automation framework for [SauceDemo](https://www.saucedemo.com), b
 - Page Object Model
 - REST Assured 5.4.0 (API testing)
 - Docker & Docker Compose (containerized test execution with Selenium Grid)
+- Allure Report (test reporting)
 
 ## Project structure
 
@@ -55,6 +56,14 @@ This spins up a Chrome container (Selenium standalone) and runs the full Cucumbe
 
 Expected result: **BUILD SUCCESS**, 6 tests passed.
 
+## Test reporting
+
+After running the tests, generate and view the Allure report:
+
+    allure serve allure-results
+
+Opens an interactive HTML report with test results, suite breakdown, and execution timeline.
+
 ## Roadmap
 
 - [x] Project setup (Maven + dependencies)
@@ -64,5 +73,5 @@ Expected result: **BUILD SUCCESS**, 6 tests passed.
 - [x] Checkout flow scenarios
 - [x] API testing (REST Assured)
 - [x] Docker containerization
-- [ ] Allure reporting
+- [x] Allure reporting
 - [ ] CI/CD with GitHub Actions
