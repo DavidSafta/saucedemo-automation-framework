@@ -11,6 +11,7 @@ UI + API test automation framework for [SauceDemo](https://www.saucedemo.com), b
 - Selenide 7.3.1 (built on Selenium WebDriver)
 - Page Object Model
 - REST Assured 5.4.0 (API testing)
+- Docker & Docker Compose (containerized test execution with Selenium Grid)
 
 ## Project structure
 
@@ -27,23 +28,32 @@ UI + API test automation framework for [SauceDemo](https://www.saucedemo.com), b
 ### Login (`login.feature`)
 - Successful login with valid credentials → redirects to inventory page
 - Failed login with invalid credentials → shows error message
-  
+
 ### Checkout (`checkout.feature`)
 - Successful checkout with one product in cart → order confirmation displayed
-  
-## How to run
 
-Run the Cucumber suite via:
-
-`TestRunner.java` (in `src/test/java/runner`)
-
-In IntelliJ: right-click `TestRunner.java` → **Run 'TestRunner'**
-
-Expected result: **6 tests passed**, exit code 0
 ### API (`api.feature`)
 - Get an existing todo item → returns 200 with title field
 - Get a non-existing todo item → returns 404
 - Create a new post → returns 201 with correct title
+
+## How to run
+
+### Locally (IntelliJ)
+
+Run the Cucumber suite via `TestRunner.java` (in `src/test/java/runner`).
+
+In IntelliJ: right-click `TestRunner.java` → **Run 'TestRunner'**
+
+Expected result: **6 tests passed**, exit code 0
+
+### With Docker
+
+    docker compose up --build
+
+This spins up a Chrome container (Selenium standalone) and runs the full Cucumber suite against it.
+
+Expected result: **BUILD SUCCESS**, 6 tests passed.
 
 ## Roadmap
 
@@ -53,6 +63,6 @@ Expected result: **6 tests passed**, exit code 0
 - [x] Login scenarios
 - [x] Checkout flow scenarios
 - [x] API testing (REST Assured)
-- [ ] Docker containerization
+- [x] Docker containerization
 - [ ] Allure reporting
 - [ ] CI/CD with GitHub Actions
