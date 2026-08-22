@@ -13,6 +13,7 @@ UI + API test automation framework for [SauceDemo](https://www.saucedemo.com), b
 - REST Assured 5.4.0 (API testing)
 - Docker & Docker Compose (containerized test execution with Selenium Grid)
 - Allure Report (test reporting)
+- GitHub Actions (CI/CD pipeline)
 
 ## Project structure
 
@@ -64,6 +65,12 @@ After running the tests, generate and view the Allure report:
 
 Opens an interactive HTML report with test results, suite breakdown, and execution timeline.
 
+## CI/CD
+
+Every push to `main` automatically triggers the GitHub Actions pipeline, which builds the Docker image, runs the full test suite (UI + API) against a containerized Chrome instance, and reports pass/fail status.
+
+See the [Actions tab](https://github.com/DavidSafta/saucedemo-automation-framework/actions) for build history.
+
 ## Roadmap
 
 - [x] Project setup (Maven + dependencies)
@@ -74,4 +81,4 @@ Opens an interactive HTML report with test results, suite breakdown, and executi
 - [x] API testing (REST Assured)
 - [x] Docker containerization
 - [x] Allure reporting
-- [ ] CI/CD with GitHub Actions
+- [x] CI/CD with GitHub Actions
